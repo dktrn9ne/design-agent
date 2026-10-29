@@ -163,6 +163,8 @@ def _text(path: str) -> str | None:
 
 
 def _identity_hits(text: str) -> Iterator[str]:
+    # Encoded pixels can coincidentally resemble chat IDs; inspect surrounding SVG text normally.
+    text = re.sub(r"data:image/(?:png|jpeg);base64,[A-Za-z0-9+/=]+", "", text)
     words = WORD.findall(text.lower())
     for first, second in zip(words, words[1:], strict=False):
         if hashlib.sha256(f"{first} {second}".encode()).hexdigest()[:24] in PRIVATE_IDENTITY_HASHES:
@@ -237,3 +239,10 @@ def test_rules_catch_known_leaks(line: str, category: str, tmp_path: Path) -> No
 def test_chat_ids_need_digits_and_are_not_synthetic() -> None:
     assert list(_identity_hits("posted in C07ABCD1234 by U0TESTUSER1")) == ["chat platform id C…"]
     assert list(_identity_hits("CONTRIBUTING and BACKGROUND are words")) == []
+
+
+def test_embedded_image_bytes_are_not_chat_ids_but_surrounding_ids_are() -> None:
+    svg = '<image href="data:image/png;base64,C07ABCD1234"/> C07ABCD1234'
+    hits = list(_identity_hits(svg))
+    assert len(hits) == 1
+    assert hits == list(_identity_hits("C07ABCD1234"))

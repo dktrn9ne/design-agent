@@ -1,0 +1,52 @@
+name = "L1brary Labs"
+description = "Applied AI and emerging technology venture studio. Culture builds better tech."
+voice = "Grounded in evidence. Plain, precise and human. Distinguish research, prototypes, pilots and working systems."
+license = "Studio brand assets: all rights reserved; configuration: Apache-2.0; fonts: OFL-1.1"
+
+[[formats]]
+slug = "linkedin-landscape"
+width = 1200
+height = 627
+label = "LinkedIn launch card"
+
+[[formats]]
+slug = "square"
+width = 1080
+height = 1080
+label = "Square social post"
+
+[[formats]]
+slug = "portrait"
+width = 1080
+height = 1350
+label = "Portrait social post"
+
+[[formats]]
+slug = "story"
+width = 1080
+height = 1920
+label = "Vertical demo"
+
+[[formats]]
+slug = "slide"
+width = 1920
+height = 1080
+label = "Expo deck or demo frame"
+
+[[formats]]
+slug = "thumbnail"
+width = 1280
+height = 720
+label = "Video thumbnail"
+
+[[logos]]
+file = "logos/lockup.svg"
+use = "Original public website artwork on white or very light grounds; no recoloring."
+min_width_px = 160
+clear_space = "Draft production default: leave at least a quarter of the artwork height. Confirm before print."
+
+[[logos]]
+file = "logos/mark.svg"
+use = "Original public website monogram on white or very light grounds."
+min_width_px = 48
+clear_space = "Draft production default: leave at least a quarter of the artwork height. Confirm before print."

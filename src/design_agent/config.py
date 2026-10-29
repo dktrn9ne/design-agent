@@ -16,6 +16,7 @@ CacheTtl = Literal["5m", "1h", "off"]
 
 DEFAULT_MODEL_SPEC = "anthropic:claude-opus-5-5"
 SAMPLE_BRAND = Path("examples/brands/example-studio")
+STUDIO_BRAND = Path("brands/l1brary-labs")
 DEFAULT_SANDBOX_IMAGE = "design-agent-sandbox:local"
 
 
@@ -173,7 +174,7 @@ class Settings(BaseSettings):
     # MDA Slack appearance
     # MDA's own rule for a Slack app name; checked here so a bad name fails before a deploy does.
     slack_name: str = Field(
-        default="Content Studio",
+        default="L1brary Labs Design",
         max_length=35,
         pattern=r"^[A-Za-z0-9_.](?:[A-Za-z0-9 _.\-]*[A-Za-z0-9_.])?$",
     )
@@ -268,10 +269,12 @@ class Settings(BaseSettings):
         return result
 
     def resolved_brand_path(self, root: Path) -> Path:
-        """The active brand pack: the configured folder when it has a pack, else the sample brand."""
+        """Configured pack, then the bundled studio pack, then the upstream sample."""
         configured = self.brand_path if self.brand_path.is_absolute() else root / self.brand_path
         if (configured / "brand.toml").is_file():
             return configured
+        if (root / STUDIO_BRAND / "brand.toml").is_file():
+            return root / STUDIO_BRAND
         return root / SAMPLE_BRAND
 
 

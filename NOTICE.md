@@ -29,3 +29,10 @@ that code's MIT notice is preserved in [licenses/managed-deepagents-sdk-MIT.txt]
 
 The sample brand in [examples/brands/example-studio/](examples/brands/example-studio/) is original
 work released under CC0-1.0.
+
+## L1brary Labs customization
+
+This fork adds studio configuration, a website-derived brand pack and a campaign workflow.
+L1brary Labs artwork was retrieved from its public website; source URLs and checksums are
+in brands/l1brary-labs/sources.md. Artwork and trademarks retain their owner's rights.
+No CC0 license is asserted for the studio pack. The bundled open fonts retain their OFL notices.

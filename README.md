@@ -1,3 +1,35 @@
+# L1brary Labs Design
+
+A design agent for L1brary Labs: launch cards, expo decks, booth graphics, merchandise
+concepts and product demos. Built on LangChain's open-source Design Agent.
+
+The studio identity, public-site brand pack and campaign workflow are configured. The
+rendering engine, sandbox and production checks remain upstream. Start with the
+[studio setup and usage guide](docs/l1brary-labs.md); the pack records its
+[source evidence and pending brand review](brands/l1brary-labs/sources.md).
+
+```bash
+uv sync --frozen --all-extras --dev
+uv run design-agent brand validate
+uv run design-agent fonts verify
+uv run design-agent doctor
+```
+
+Real creative requests need a model key and a working sandbox. No service is deployed by
+these commands. The no-key demo requires Docker and intentionally renders the upstream sample.
+See the guide for credentials, costs, sample requests and print-production boundaries.
+
+Apache-2.0 code; original L1brary Labs artwork retains its brand rights.
+[License](LICENSE) · [Notices](NOTICE.md).
+
+---
+
+## Upstream project
+
+The original LangChain README follows. Its launch examples, usage statistics and brand
+imagery describe LangChain's deployment, not L1brary Labs. Use the studio guide above for
+this fork's defaults and setup.
+
 <div align="center">
   <p>
     <a href="https://www.langchain.com/?utm_source=github&utm_medium=readme&utm_campaign=design-agent#gh-light-mode-only"><img src="https://github.com/langchain-ai/design-agent/raw/main/docs/assets/readme/logos/langchain-company-light.svg" alt="LangChain" width="152"></a><a href="https://www.langchain.com/?utm_source=github&utm_medium=readme&utm_campaign=design-agent#gh-dark-mode-only"><img src="https://github.com/langchain-ai/design-agent/raw/main/docs/assets/readme/logos/langchain-company-dark.svg" alt="LangChain" width="152"></a>
