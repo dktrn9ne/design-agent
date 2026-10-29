@@ -1,0 +1,24 @@
+/* Generated from tokens.json by `design-agent brand css`. Do not edit. */
+:root {
+  --brand-color-blue-pale: #b5d2ff;
+  --brand-color-ink: #101116;
+  --brand-color-line: #e3e7ee;
+  --brand-color-mist: #f6faff;
+  --brand-color-muted: #626776;
+  --brand-color-navy: #0b111e;
+  --brand-color-paper: #ffffff;
+  --brand-color-signal: #0757f7;
+  --brand-color-slate: #b8c7de;
+  --brand-font-display: "Fraunces", serif;
+  --brand-font-mono: "Fragment Mono", monospace;
+  --brand-font-text: "Inter", sans-serif;
+  --brand-radius-lg: 0px;
+  --brand-radius-md: 0px;
+  --brand-radius-sm: 0px;
+  --brand-space-unit: 8px;
+  --brand-stroke: 2px;
+  --brand-tracking-display: -0.02em;
+  --brand-weight-display: 400;
+  --brand-weight-strong: 600;
+  --brand-weight-text: 400;
+}

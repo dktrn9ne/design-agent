@@ -1,3 +1,10 @@
+# L1brary Labs fork scope
+
+The user requested a L1brary Labs design agent. This fork intentionally includes the studio's
+public brand pack under `brands/l1brary-labs/`, studio identity and the `studio-campaigns`
+workflow. This is the exception to the upstream brand-neutral guidance below. Keep private
+brand materials and credentials ignored. See `docs/l1brary-labs.md` for setup and provenance.
+
 # Working in this repository
 
 Design Agent is an open-source design agent with one shared core and two deployment paths: Managed

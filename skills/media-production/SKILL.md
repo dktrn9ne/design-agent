@@ -6,6 +6,8 @@ description: Route any design or motion request to the right pipeline and skill,
 # Media production
 
 Pick the pipeline from what the person will receive, then open its skill.
+For a studio campaign, expo/convention deck, booth, swag, merchandise or product demo,
+read `studio-campaigns` as well; it coordinates the existing production skills.
 
 | They will receive | Pipeline | Skill |
 | --- | --- | --- |

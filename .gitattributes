@@ -1,0 +1,11 @@
+# Skill integrity checks compare raw bytes against upstream pins on every platform.
+* text=auto eol=lf
+*.png binary
+*.jpeg binary
+*.jpg binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+# These upstream files deliberately contain CRLF; preserve their original bytes.
+fonts/licenses/IBMPlexMono-OFL.txt -text
+tests/unit/harness/fixtures/hyperframes-render-tty.log -text
